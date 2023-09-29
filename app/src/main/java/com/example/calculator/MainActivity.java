@@ -63,6 +63,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             resultTv.setText("0");
             return;
         }
+
+        if((buttonText.equals("+") || buttonText.equals("-") || buttonText.equals("*") || buttonText.equals("/")) && dataToCalculate.length() < 1){
+            return;
+        }
+
         if(buttonText.equals("=")){
             solutionTv.setText(resultTv.getText());
             return;
